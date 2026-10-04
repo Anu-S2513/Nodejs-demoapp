@@ -3,14 +3,14 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                sh 'docker build -t nodejs-demoapp .'
+                bat 'docker build -t nodejs-demoapp .'
 
             }
             
         }
         stage('Test'){
             steps{
-                sh 'npm test'
+                bat 'npm test'
             }
         }
         stage('Deploy'){
