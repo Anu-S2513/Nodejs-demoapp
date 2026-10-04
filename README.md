@@ -1,47 +1,54 @@
-# 🚀 Node.js Demo App — DevOps Internship Task 1
+# 🚀 Node.js CI/CD Automation Project
 
-> **Automate Code Deployment Using CI/CD Pipeline with GitHub Actions**
+A practical DevOps project demonstrating **Continuous Integration and Continuous Deployment (CI/CD)** using **GitHub Actions, Jenkins, and Docker**.
 
----
-
-## 🎯 Objective
-
-Build an automated **CI/CD pipeline** for a Node.js web application that automatically:
-
-🧪 Tests the application  
-🐳 Builds a Docker image  
-🔐 Authenticates with Docker Hub  
-☁️ Pushes the Docker image to Docker Hub  
-
-The pipeline is triggered whenever new code is pushed to the **`main`** branch.
+This repository contains the implementations completed for **Task 1 and Task 2** of the DevOps internship.
 
 ---
 
-## 🔄 CI/CD Pipeline
+## 📌 Project Overview
+
+The project uses a simple Node.js web application to demonstrate how modern DevOps tools can automate the software delivery process.
+
+The application is containerized using **Docker** and automated through two different CI/CD approaches:
+
+- **Task 1:** GitHub Actions CI/CD Pipeline
+- **Task 2:** Jenkins CI/CD Pipeline
+
+### 🎯 Project Objective
+
+To understand and implement automated:
+
+**Code Integration → Build → Testing → Containerization → Deployment**
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| **Node.js** | Application runtime |
+| **Git** | Version control |
+| **GitHub** | Source code repository |
+| **GitHub Actions** | CI/CD automation |
+| **Jenkins** | CI/CD automation server |
+| **Docker** | Application containerization |
+
+---
+
+# 📁 Project Structure
 
 ```text
-👨‍💻 Developer
-     │
-     │  git push
-     ▼
-📦 GitHub Repository
-     │
-     ▼
-⚙️ GitHub Actions
-     │
-     ├── 📥 Checkout Source Code
-     │
-     ├── 🟢 Setup Node.js
-     │
-     ├── 📦 Install Dependencies
-     │
-     ├── 🧪 Run Tests
-     │
-     ├── 🐳 Build Docker Image
-     │
-     ├── 🔐 Login to Docker Hub
-     │
-     └── ☁️ Push Docker Image
-                │
-                ▼
-        🐳 Docker Hub
+Nodejs-demoapp/
+│
+├── server.js
+├── package.json
+├── Dockerfile
+├── .dockerignore
+├── .gitignore
+├── Jenkinsfile
+├── .github/
+│   └── workflows/
+│       └── main.yml
+│
+└── README.md
